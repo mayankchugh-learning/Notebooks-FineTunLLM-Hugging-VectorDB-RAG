@@ -32,6 +32,7 @@ A notebook-only learning repository for building with large language models: pro
    - Provider-specific keys such as SerpAPI, Pinecone, or Weaviate cluster URL and API key when a notebook calls those services
 3. Install dependencies per notebook (`pip install` cells). Stacks vary by topic; expect **LangChain**, **Hugging Face** (`transformers`, `datasets`, `peft`, `trl`, `accelerate`), **PyTorch**, and vector-database clients.
 4. Prefer a **GPU runtime** for fine-tuning, embedding at scale, and large open-weight model loading.
+5. Before pushing notebooks, clear cell outputs so API keys are not saved in the `.ipynb` file. If GitHub rejects a push for leaked secrets, see [github-troubleshooting.md](github-troubleshooting.md).
 
 ## Notebook index
 
@@ -117,6 +118,12 @@ A notebook-only learning repository for building with large language models: pro
 ## Tools and libraries
 
 Python, Jupyter, Google Colab, LangChain, Hugging Face Transformers / Datasets / PEFT / TRL, PyTorch, FAISS, ChromaDB, Weaviate, Pinecone, OpenAI API, Google Gemini API, SerpAPI, and dotenv-based configuration.
+
+## Troubleshooting
+
+| Guide | When to use it |
+| --- | --- |
+| [github-troubleshooting.md](github-troubleshooting.md) | Push blocked (GH013), secrets in notebook outputs or git history, rotating compromised tokens |
 
 ## License
 
