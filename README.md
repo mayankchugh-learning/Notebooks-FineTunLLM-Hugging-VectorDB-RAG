@@ -4,8 +4,8 @@ A notebook-only learning repository for building with large language models: pro
 
 ## What is in this repository
 
-- **36 Jupyter notebooks** at the repository root; there is no packaged Python application or shared library layer.
-- **Course-style progression** in `Day2.ipynb` through `Day5 Hugging face.ipynb`, plus parallel LangChain walkthroughs and end-to-end demos.
+- **42 Jupyter notebooks** organized into topic folders; there is no packaged Python application or shared library layer.
+- **Course-style progression** in `openai-and-prompt-engineering/Day2.ipynb` through `langchain/Day5 Hugging face.ipynb`, plus parallel LangChain walkthroughs and end-to-end demos.
 - **Personal or duplicate variants** of several notebooks, often suffixed with `_Mine`, `_orignal`, or `(1)` / `(2)`, for side-by-side comparison or scratch work.
 - **Scratch notebooks** (`Untitled.ipynb`, `Untitled2.ipynb`) that are not part of a guided path.
 
@@ -16,6 +16,7 @@ A notebook-only learning repository for building with large language models: pro
 | OpenAI and prompting | API setup, playground-style usage, structured prompting, and hallucination awareness |
 | Multi-provider APIs | Hugging Face Inference, OpenAI GPT, Google Gemini / Gemma, and related REST patterns |
 | LangChain | Prompt templates, chains, agents, tools, memory, and document loaders |
+| LangGraph | Stateful agents, human-in-the-loop interrupts, tools, and memory |
 | RAG | URL ingestion, chunking, embeddings, vector retrieval, and Q&A chains |
 | Vector stores | FAISS, ChromaDB, Weaviate, and Pinecone |
 | Open models | LLaMA 2 and Mistral with Hugging Face Transformers and LangChain wrappers |
@@ -36,7 +37,9 @@ A notebook-only learning repository for building with large language models: pro
 
 ## Notebook index
 
-### OpenAI API and prompt engineering
+Notebooks are grouped by topic in the folders below.
+
+### `openai-and-prompt-engineering/`
 
 | Notebook | Focus |
 | --- | --- |
@@ -51,14 +54,14 @@ A notebook-only learning repository for building with large language models: pro
 | `PrompEngineeringGuideLines.ipynb` | Same prompting curriculum (alternate copy) |
 | `Prompts_in_LLMs.ipynb` | Prompt patterns in LLM workflows, including translation-style tasks |
 
-### Provider APIs (Hugging Face, OpenAI, Gemini)
+### `provider-apis/`
 
 | Notebook | Focus |
 | --- | --- |
 | `APIs.ipynb` | Hugging Face Inference API, Gemma, OpenAI GPT, and Gemini |
 | `Huggingface-OpenAI-Gemini.ipynb` | Multi-provider API comparison and usage |
 
-### LangChain fundamentals and integrations
+### `langchain/`
 
 | Notebook | Focus |
 | --- | --- |
@@ -72,7 +75,7 @@ A notebook-only learning repository for building with large language models: pro
 | `Huggingface_with_Langchain.ipynb` | Hugging Face models integrated with LangChain |
 | `Day5 Hugging face.ipynb` | Hugging Face + LangChain setup and environment configuration |
 
-### Vector databases and semantic search
+### `vector-databases/`
 
 | Notebook | Focus |
 | --- | --- |
@@ -82,14 +85,14 @@ A notebook-only learning repository for building with large language models: pro
 | `Weaviate_Vector_Database.ipynb` | Weaviate: ingest, split, embed, and store vectors |
 | `Weaviate_Vector_Database_Mine.ipynb` | Personal Weaviate variant |
 
-### RAG and custom chatbots
+### `rag-and-chatbots/`
 
 | Notebook | Focus |
 | --- | --- |
 | `Ineuron_custom_website_chatbot.ipynb` | Website URL ingestion, chunking, Pinecone, embeddings, retrieval Q&A |
 | `Ineuron_custom_website_chatbot_mine.ipynb` | Personal variant (URL extraction and RAG setup) |
 
-### Open-source LLMs, fine-tuning, and quantization
+### `open-source-llms-finetuning/`
 
 | Notebook | Focus |
 | --- | --- |
@@ -98,9 +101,25 @@ A notebook-only learning repository for building with large language models: pro
 | `Mistral_Finetuning_GenaiV1_Mayank.ipynb` | Mistral SFT on `samsum` with PEFT / `SFTTrainer` |
 | `Mistral_Finetuning_GenaiV1_sunny.ipynb` | Parallel Mistral fine-tuning notebook |
 | `Finetune_LLM_using_DPO.ipynb` | SFT then DPO alignment (Alpaca, Anthropic HH-RLHF, LoRA, `DPOTrainer`) |
+| `Fine_Tune_Llama2_on_Custom_data.ipynb` | LLaMA 2 fine-tuning on custom data |
 | `GGUF_Quantization.ipynb` | Quantization formats (GPTQ, GGML, GGUF, AWQ) and `llama.cpp` / Hub download notes |
 
-### Scratch
+### `langgraph/`
+
+| Notebook | Focus |
+| --- | --- |
+| `LangGraph_Agents_Tools_Memory_Demo.ipynb` | LangGraph agents with tools and memory |
+| `LangGraph_Human_in_the_Loop_Interrupt_Demo.ipynb` | Human-in-the-loop interrupts with LangGraph |
+
+### `huggingface-live-classes/`
+
+| Notebook | Focus |
+| --- | --- |
+| `Huggingface_Live_Class.ipynb` | Hugging Face live class session |
+| `huggingface_explore_live_class-24May26.ipynb` | Hugging Face explore session (24 May 2026) |
+| `Huggingface_explore_live_class-25May26.ipynb` | Hugging Face explore session (25 May 2026) |
+
+### `scratch/`
 
 | Notebook | Notes |
 | --- | --- |
@@ -109,11 +128,11 @@ A notebook-only learning repository for building with large language models: pro
 
 ## Suggested learning path
 
-1. **APIs and prompts** — `Day3.ipynb` or `PrompEngineering.ipynb`, then `APIs.ipynb` or `Huggingface-OpenAI-Gemini.ipynb`.
-2. **LangChain core** — `LangChain-1.ipynb` and `Langchain_HuggingFace_SerpAPI_DocumentLoader_Complete_Demo.ipynb`.
-3. **Embeddings and retrieval** — `FAISS_Demo.ipynb` or `ChromaDB_demo.ipynb`, then `Weaviate_Vector_Database.ipynb`.
-4. **RAG application** — `Ineuron_custom_website_chatbot.ipynb`.
-5. **Open weights and training** — `Open_Source_LLMs_Llama2_(Langchain_&_HuggingFace).ipynb`, `Mistral_Finetuning_GenaiV1_Mayank.ipynb`, `Finetune_LLM_using_DPO.ipynb`, and `GGUF_Quantization.ipynb` as needed.
+1. **APIs and prompts** — `openai-and-prompt-engineering/Day3.ipynb` or `openai-and-prompt-engineering/PrompEngineering.ipynb`, then `provider-apis/APIs.ipynb` or `provider-apis/Huggingface-OpenAI-Gemini.ipynb`.
+2. **LangChain core** — `langchain/LangChain-1.ipynb` and `langchain/Langchain_HuggingFace_SerpAPI_DocumentLoader_Complete_Demo.ipynb`.
+3. **Embeddings and retrieval** — `vector-databases/FAISS_Demo.ipynb` or `vector-databases/ChromaDB_demo.ipynb`, then `vector-databases/Weaviate_Vector_Database.ipynb`.
+4. **RAG application** — `rag-and-chatbots/Ineuron_custom_website_chatbot.ipynb`.
+5. **Open weights and training** — `open-source-llms-finetuning/Open_Source_LLMs_Llama2_(Langchain_&_HuggingFace).ipynb`, `open-source-llms-finetuning/Mistral_Finetuning_GenaiV1_Mayank.ipynb`, `open-source-llms-finetuning/Finetune_LLM_using_DPO.ipynb`, and `open-source-llms-finetuning/GGUF_Quantization.ipynb` as needed.
 
 ## Tools and libraries
 
