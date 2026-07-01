@@ -4,10 +4,10 @@ A notebook-only learning repository for building with large language models: pro
 
 ## What is in this repository
 
-- **42 Jupyter notebooks** organized into topic folders; there is no packaged Python application or shared library layer.
-- **Course-style progression** in `openai-and-prompt-engineering/Day2.ipynb` through `langchain/Day5 Hugging face.ipynb`, plus parallel LangChain walkthroughs and end-to-end demos.
-- **Personal or duplicate variants** of several notebooks, often suffixed with `_Mine`, `_orignal`, or `(1)` / `(2)`, for side-by-side comparison or scratch work.
-- **Scratch notebooks** (`Untitled.ipynb`, `Untitled2.ipynb`) that are not part of a guided path.
+- **42 Jupyter notebooks** organized into topic folders; each includes a **self-learning intro** (objectives, prerequisites) at the top.
+- **Course-style progression** from `provider-apis/openai-chat-completions-and-dalle.ipynb` through `langchain/langchain-huggingface-setup-day5.ipynb`, plus LangGraph and fine-tuning tracks.
+- **Personal or duplicate variants** kept with clear names (`-personal`, `-copy`, `-wip`, `-mayank`, `-sunny`); archived copies live in `scratch/`.
+- **Scratch notebooks** in `scratch/` — drafts, duplicates, and experiments not on the guided path.
 
 ## Topics covered
 
@@ -37,102 +37,104 @@ A notebook-only learning repository for building with large language models: pro
 
 ## Notebook index
 
-Notebooks are grouped by topic in the folders below.
+Each notebook opens with a self-learning markdown cell: title, learning objectives, and prerequisites. Run cells top-to-bottom.
 
-### `openai-and-prompt-engineering/`
-
-| Notebook | Focus |
-| --- | --- |
-| `Day2.ipynb` | Early OpenAI API usage |
-| `Day3.ipynb` | OpenAI API overview, key generation, and playground-style exploration |
-| `Day3-short.ipynb` | Shorter OpenAI API exercises |
-| `testopenaiapi_orignal.ipynb` | OpenAI API walkthrough (original variant) |
-| `testopenaiapi and langchain_orignal.ipynb` | OpenAI API with LangChain (original variant) |
-| `testopenaiapi and langchain (1).ipynb` | OpenAI API with LangChain (variant 1) |
-| `testopenaiapi and langchain (2).ipynb` | OpenAI API with LangChain (variant 2) |
-| `PrompEngineering.ipynb` | Prompting guidelines: delimiters, structured output, few-shot, and chain-of-thought tactics |
-| `PrompEngineeringGuideLines.ipynb` | Same prompting curriculum (alternate copy) |
-| `Prompts_in_LLMs.ipynb` | Prompt patterns in LLM workflows, including translation-style tasks |
-
-### `provider-apis/`
+### `openai-and-prompt-engineering/` (2)
 
 | Notebook | Focus |
 | --- | --- |
-| `APIs.ipynb` | Hugging Face Inference API, Gemma, OpenAI GPT, and Gemini |
-| `Huggingface-OpenAI-Gemini.ipynb` | Multi-provider API comparison and usage |
+| `prompt-engineering-guidelines.ipynb` | Prompting principles: delimiters, structured output, few-shot, chain-of-thought, hallucinations |
+| `prompt-engineering-guidelines-copy.ipynb` | Alternate working copy of the guidelines notebook |
 
-### `langchain/`
-
-| Notebook | Focus |
-| --- | --- |
-| `LangChain-1.ipynb` | LangChain basics: prompts, agents, chains, memory, document loaders |
-| `LangChain-2.ipynb` | Continued LangChain topics (dated session notes in notebook) |
-| `day5.ipynb` | LangChain session: prompting, agents, SerpAPI, chains, memory |
-| `Day4.ipynb` | Prompt templates and agents |
-| `LangChain_Complete_Course.ipynb` | LangChain with OpenAI, Hugging Face Hub, and Gemini |
-| `Langchain_HuggingFace_SerpAPI_DocumentLoader_Complete_Demo.ipynb` | End-to-end LangChain demo: Hugging Face, SerpAPI, loaders, agents, memory |
-| `Langchain_HuggingFace_SerpAPI_DocumentLoader_Complete_Demo copy.ipynb` | Duplicate of the complete LangChain demo |
-| `Huggingface_with_Langchain.ipynb` | Hugging Face models integrated with LangChain |
-| `Day5 Hugging face.ipynb` | Hugging Face + LangChain setup and environment configuration |
-
-### `vector-databases/`
+### `provider-apis/` (7)
 
 | Notebook | Focus |
 | --- | --- |
-| `FAISS_Demo.ipynb` | FAISS vector store with LangChain |
-| `FAIIS_Demo_mine.ipynb` | Personal FAISS variant |
-| `ChromaDB_demo.ipynb` | Chroma persistence, semantic search, and chaining |
-| `Weaviate_Vector_Database.ipynb` | Weaviate: ingest, split, embed, and store vectors |
-| `Weaviate_Vector_Database_Mine.ipynb` | Personal Weaviate variant |
+| `openai-chat-completions-and-dalle.ipynb` | First OpenAI SDK: chat completions and DALL·E image generation |
+| `openai-api-models-and-function-calling.ipynb` | Model listing, chat completions, JSON extraction, function calling |
+| `openai-function-calling-short.ipynb` | Condensed function-calling and structured extraction demo |
+| `openai-api-function-calling-original.ipynb` | Original OpenAI API + function calling walkthrough |
+| `openai-api-setup-and-models.ipynb` | API key setup and model discovery (Part 1 of longer course) |
+| `multi-provider-apis-hf-openai-gemini.ipynb` | Hugging Face Inference, OpenAI GPT, and Google Gemini comparison |
 
-### `rag-and-chatbots/`
-
-| Notebook | Focus |
-| --- | --- |
-| `Ineuron_custom_website_chatbot.ipynb` | Website URL ingestion, chunking, Pinecone, embeddings, retrieval Q&A |
-| `Ineuron_custom_website_chatbot_mine.ipynb` | Personal variant (URL extraction and RAG setup) |
-
-### `open-source-llms-finetuning/`
+### `langchain/` (11)
 
 | Notebook | Focus |
 | --- | --- |
-| `Open_Source_LLMs_Llama2_(Langchain_&_HuggingFace).ipynb` | LLaMA 2 with LangChain and Hugging Face |
-| `Open_Source_LLMs_Llama2_(Langchain_&_HuggingFace)_Mine.ipynb` | Personal LLaMA 2 variant |
-| `Mistral_Finetuning_GenaiV1_Mayank.ipynb` | Mistral SFT on `samsum` with PEFT / `SFTTrainer` |
-| `Mistral_Finetuning_GenaiV1_sunny.ipynb` | Parallel Mistral fine-tuning notebook |
-| `Finetune_LLM_using_DPO.ipynb` | SFT then DPO alignment (Alpaca, Anthropic HH-RLHF, LoRA, `DPOTrainer`) |
-| `Fine_Tune_Llama2_on_Custom_data.ipynb` | LLaMA 2 fine-tuning on custom data |
-| `GGUF_Quantization.ipynb` | Quantization formats (GPTQ, GGML, GGUF, AWQ) and `llama.cpp` / Hub download notes |
+| `langchain-openai-zero-shot-intro.ipynb` | LangChain intro with OpenAI zero-shot prompting |
+| `langchain-openai-session-2.ipynb` | Continued LangChain session topics |
+| `langchain-openai-prompts-agents-chains.ipynb` | Prompts, SerpAPI agents, chains, memory |
+| `langchain-openai-prompts-agents-chains-day5.ipynb` | Day 5 alternate copy of the agents/chains session |
+| `langchain-complete-course-openai-hf-gemini.ipynb` | Full LangChain course across OpenAI, HF Hub, and Gemini |
+| `openai-and-langchain-complete-demo.ipynb` | Combined OpenAI API + LangChain end-to-end demo |
+| `langchain-hf-serpapi-document-loader-demo.ipynb` | HF Hub, SerpAPI, document loaders, agents, memory |
+| `langchain-huggingface-hub-and-pipeline.ipynb` | HuggingFaceHub seq2seq + local HuggingFacePipeline |
+| `langchain-huggingface-setup-day5.ipynb` | Day 5 Hugging Face + LangChain environment setup |
+| `langchain-llama2-prompts-and-chains.ipynb` | Local Llama 2 with LangChain prompts and LLMChain |
 
-### `langgraph/`
-
-| Notebook | Focus |
-| --- | --- |
-| `LangGraph_Agents_Tools_Memory_Demo.ipynb` | LangGraph agents with tools and memory |
-| `LangGraph_Human_in_the_Loop_Interrupt_Demo.ipynb` | Human-in-the-loop interrupts with LangGraph |
-
-### `huggingface-live-classes/`
+### `vector-databases/` (5)
 
 | Notebook | Focus |
 | --- | --- |
-| `Huggingface_Live_Class.ipynb` | Hugging Face live class session |
-| `huggingface_explore_live_class-24May26.ipynb` | Hugging Face explore session (24 May 2026) |
-| `Huggingface_explore_live_class-25May26.ipynb` | Hugging Face explore session (25 May 2026) |
+| `faiss-demo-langchain.ipynb` | FAISS vector store: PDF ingest, embeddings, RetrievalQA |
+| `faiss-demo-personal.ipynb` | Personal FAISS variant |
+| `chromadb-demo-langchain.ipynb` | Chroma persistence, semantic search, RetrievalQA |
+| `weaviate-vector-database-demo.ipynb` | Weaviate cloud: ingest, embed, search, chatbot |
+| `weaviate-vector-database-personal.ipynb` | Personal Weaviate cluster variant |
 
-### `scratch/`
+### `rag-and-chatbots/` (2)
+
+| Notebook | Focus |
+| --- | --- |
+| `ineuron-website-rag-chatbot.ipynb` | Full RAG chatbot: sitemap scrape, Pinecone, Llama 2 RetrievalQA |
+| `ineuron-website-rag-chatbot-wip.ipynb` | Work-in-progress personal variant (URL extraction only) |
+
+### `open-source-llms-finetuning/` (7)
+
+| Notebook | Focus |
+| --- | --- |
+| `llama2-inference-langchain-huggingface.ipynb` | Llama 2 7B inference via Transformers + LangChain |
+| `llama2-inference-langchain-huggingface-personal.ipynb` | Personal variant using non-gated Llama 2 checkpoint |
+| `mistral-7b-lora-sft-samsum-mayank.ipynb` | Mistral 7B GPTQ + LoRA SFT on SAMSum (Mayank) |
+| `mistral-7b-lora-sft-samsum-sunny.ipynb` | Parallel Mistral SFT run (Sunny) |
+| `tinyllama-sft-then-dpo-alignment.ipynb` | SFT on Alpaca, then DPO on Anthropic HH-RLHF |
+| `llama2-qlora-finetune-guanaco.ipynb` | QLoRA fine-tuning Llama 2 on Guanaco instruction data |
+| `gguf-quantization-llama-cpp.ipynb` | GGUF quantization with llama.cpp and Hub upload |
+
+### `langgraph/` (2)
+
+| Notebook | Focus |
+| --- | --- |
+| `langgraph-agents-tools-memory-streaming.ipynb` | StateGraph agents, tools, ReAct loop, checkpoint memory, streaming |
+| `langgraph-human-in-the-loop-interrupt.ipynb` | Human-in-the-loop `interrupt()` and `Command(resume=...)` |
+
+### `huggingface-live-classes/` (1)
+
+| Notebook | Focus |
+| --- | --- |
+| `huggingface-hub-api-datasets-inference.ipynb` | HF Hub API, datasets (WikiText, Alpaca), InferenceClient |
+
+### `scratch/` (7)
 
 | Notebook | Notes |
 | --- | --- |
-| `Untitled.ipynb` | Minimal OpenAI / path experiments |
-| `Untitled2.ipynb` | TensorFlow scratch |
+| `multi-provider-apis-variant.ipynb` | Duplicate of multi-provider APIs notebook |
+| `openai-and-langchain-complete-demo-original.ipynb` | Archived original of combined OpenAI + LangChain demo |
+| `langchain-hf-serpapi-demo-copy.ipynb` | Duplicate of SerpAPI document-loader demo |
+| `huggingface-hub-explore-2025-05-24.ipynb` | Early draft of live-class material |
+| `huggingface-hub-explore-2025-05-25.ipynb` | Short token-discovery draft |
+| `openai-api-pathlib-experiments.ipynb` | Ad-hoc OpenAI and pathlib experiments |
+| `tensorflow-install-troubleshooting.ipynb` | TensorFlow install debugging on macOS |
 
 ## Suggested learning path
 
-1. **APIs and prompts** — `openai-and-prompt-engineering/Day3.ipynb` or `openai-and-prompt-engineering/PrompEngineering.ipynb`, then `provider-apis/APIs.ipynb` or `provider-apis/Huggingface-OpenAI-Gemini.ipynb`.
-2. **LangChain core** — `langchain/LangChain-1.ipynb` and `langchain/Langchain_HuggingFace_SerpAPI_DocumentLoader_Complete_Demo.ipynb`.
-3. **Embeddings and retrieval** — `vector-databases/FAISS_Demo.ipynb` or `vector-databases/ChromaDB_demo.ipynb`, then `vector-databases/Weaviate_Vector_Database.ipynb`.
-4. **RAG application** — `rag-and-chatbots/Ineuron_custom_website_chatbot.ipynb`.
-5. **Open weights and training** — `open-source-llms-finetuning/Open_Source_LLMs_Llama2_(Langchain_&_HuggingFace).ipynb`, `open-source-llms-finetuning/Mistral_Finetuning_GenaiV1_Mayank.ipynb`, `open-source-llms-finetuning/Finetune_LLM_using_DPO.ipynb`, and `open-source-llms-finetuning/GGUF_Quantization.ipynb` as needed.
+1. **Prompts** — `openai-and-prompt-engineering/prompt-engineering-guidelines.ipynb`
+2. **APIs** — `provider-apis/openai-api-models-and-function-calling.ipynb`, then `provider-apis/multi-provider-apis-hf-openai-gemini.ipynb`
+3. **LangChain core** — `langchain/langchain-openai-zero-shot-intro.ipynb` → `langchain/langchain-hf-serpapi-document-loader-demo.ipynb`
+4. **Embeddings & retrieval** — `vector-databases/faiss-demo-langchain.ipynb` or `vector-databases/chromadb-demo-langchain.ipynb` → `vector-databases/weaviate-vector-database-demo.ipynb`
+5. **RAG application** — `rag-and-chatbots/ineuron-website-rag-chatbot.ipynb`
+6. **LangGraph** — `langgraph/langgraph-agents-tools-memory-streaming.ipynb` → `langgraph/langgraph-human-in-the-loop-interrupt.ipynb`
+7. **Open weights & training** — `open-source-llms-finetuning/llama2-inference-langchain-huggingface.ipynb` → `open-source-llms-finetuning/mistral-7b-lora-sft-samsum-mayank.ipynb` → `open-source-llms-finetuning/tinyllama-sft-then-dpo-alignment.ipynb` → `open-source-llms-finetuning/gguf-quantization-llama-cpp.ipynb`
 
 ## Tools and libraries
 
